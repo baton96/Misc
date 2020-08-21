@@ -10,8 +10,6 @@
 
 import pandas as pd
 
-# df = pd.read_csv('imdb1000.csv')
-# df = pd.read_csv('imdb100.csv')
 df = pd.read_csv('imdb50.csv')
 avg_num_votes = df.Votes.mean()
 
