@@ -10,13 +10,14 @@
 
 import pandas as pd
 
-df = pd.read_csv('imdb50.csv')
+df = pd.read_csv('imdb50.csv').sort_values('Rating').reset_index(drop=True)
 avg_num_votes = df.Votes.mean()
-
-avg_rating = df.Rating.mean()
-base_rating = avg_rating * avg_num_votes
+base_rating = df.Rating.mean() * avg_num_votes
 df['BaysianRating'] = (base_rating + (df.Votes * df.Rating)) / (avg_num_votes + df.Votes)
 
-print(df[['Title', 'Votes', 'Rating', 'BaysianRating']].head())
-
-
+#print(df[['Votes', 'Rating', 'BaysianRating']])
+import matplotlib.pyplot as plt
+fig, ax = plt.subplots()
+ax.plot(df.Rating, marker='.', linestyle='')
+ax.plot(df.BaysianRating, marker='.', linestyle='')
+plt.show()
