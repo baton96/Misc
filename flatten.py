@@ -4,7 +4,8 @@ def flatten(obj):
             yield from flatten(item)
     except:
         yield obj
-        
+
+
 def flatten(obj):
     try:
         return [e for item in obj for e in flatten(item)]

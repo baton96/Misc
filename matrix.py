@@ -11,7 +11,7 @@ def getchars(_start, _end):
 black, green, white = "30", "32", "37"
 FRAME_DELAY = 0.075
 chars = (
-    getchars(2308, 2361) + getchars(2392, 2401) + getchars(2418, 2431) + getchars(2437, 2443) + getchars(2451, 2472)
+        getchars(2308, 2361) + getchars(2392, 2401) + getchars(2418, 2431) + getchars(2437, 2443) + getchars(2451, 2472)
 )
 
 

@@ -1,8 +1,9 @@
 from PIL import Image, ImageDraw, ImageFont
-font = ImageFont.truetype('CircularStd-Book.ttf', 150)
-#font = ImageFont.truetype('arial.ttf', 150)
 
-#for letter in []:#list('ĘÓĄŚŁŻŹĆŃ'):
+font = ImageFont.truetype('CircularStd-Book.ttf', 150)
+# font = ImageFont.truetype('arial.ttf', 150)
+
+# for letter in []:#list('ĘÓĄŚŁŻŹĆŃ'):
 for i in range(65, 91):
     letter = chr(i)
     width = font.font.getsize(letter)[0][0]

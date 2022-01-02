@@ -15,8 +15,9 @@ avg_num_votes = df.Votes.mean()
 base_rating = df.Rating.mean() * avg_num_votes
 df['BaysianRating'] = (base_rating + (df.Votes * df.Rating)) / (avg_num_votes + df.Votes)
 
-#print(df[['Votes', 'Rating', 'BaysianRating']])
+# print(df[['Votes', 'Rating', 'BaysianRating']])
 import matplotlib.pyplot as plt
+
 fig, ax = plt.subplots()
 ax.plot(df.Rating, marker='.', linestyle='')
 ax.plot(df.BaysianRating, marker='.', linestyle='')
